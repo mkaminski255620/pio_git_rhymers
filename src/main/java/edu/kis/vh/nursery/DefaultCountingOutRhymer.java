@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
 
 	private static final int numbersSize = 12;
 
-	private int[] numbers = new int[numbersSize];
+	private final int[] numbers = new int[numbersSize];
 
     public int total = minimumSize;
 
