@@ -4,13 +4,18 @@ public class DefaultCountingOutRhymer {
 
     private static final int fullSize = 11;
 
-	private static final int minimumSize = -1;
 
-	private static final int numbersSize = 12;
+  public int getTotal() {
+        return total;
+    }
 
-	private final int[] numbers = new int[numbersSize];
+    private static final int minimumSize = -1;
 
-    public int total = minimumSize;
+    private static final int numbersSize = 12;
+
+    private final int[] numbers = new int[numbersSize];
+
+    private int total = minimumSize;
 
     public void countIn(int in) {
         if (!isFull())
