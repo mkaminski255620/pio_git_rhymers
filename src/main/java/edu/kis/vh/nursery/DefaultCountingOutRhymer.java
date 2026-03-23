@@ -1,16 +1,18 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-
-    private static final int fullSize = 11;
-
-	private static final int minimumSize = -1;
-
+	
 	private static final int numbersSize = 12;
 
+    private static final int fullSize = numbersSize-1;
+
+    private static final int minimumSize = -1;
+    private static final int minimumSizeButDifrent = -1;
+
+	
 	private final int[] numbers = new int[numbersSize];
 
-    public int total = minimumSize;
+	public int total = minimumSize;
 
     public void countIn(int in) {
         if (!isFull())
@@ -18,7 +20,7 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return total == minimumSize;
+        return total == minimumSizeButDifrent;
     }
 
     public boolean isFull() {
