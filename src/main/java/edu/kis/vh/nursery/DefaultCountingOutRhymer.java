@@ -6,14 +6,17 @@ public class DefaultCountingOutRhymer {
 
     private static final int FULL_SIZE = NUMBERS_SIZE - 1;
 
-    private static final int MINIMUM_SIZE = -1;
-    private static final int INIMUM_SIZE_BUT_DIFRENT = -1;
+private static final int EMPTY_RHYMER_INDICATOR = -1;
+	private static final int DEFAULT_VALUE = -1; 
+	private static final int CAPACITY = 12;
 
-	
-	private final int[] numbers = new int[NUMBERS_SIZE];
+	private final int[] numbers = new int[CAPACITY];
 
-	public int total = MINIMUM_SIZE;
+	private int total = EMPTY_RHYMER_INDICATOR;
 
+	public int getTotal() {
+		return total;
+	}
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
