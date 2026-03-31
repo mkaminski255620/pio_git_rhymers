@@ -23,7 +23,7 @@ private static final int EMPTY_RHYMER_INDICATOR = -1;
     }
 
     public boolean callCheck() {
-        return total == INIMUM_SIZE_BUT_DIFRENT;
+        return total == EMPTY_RHYMER_INDICATOR;
     }
 
     public boolean isFull() {
@@ -32,13 +32,13 @@ private static final int EMPTY_RHYMER_INDICATOR = -1;
 
     protected int peekaboo() {
         if (callCheck())
-            return MINIMUM_SIZE;
+            return EMPTY_RHYMER_INDICATOR;
         return numbers[total];
     }
 
     public int countOut() {
         if (callCheck())
-            return MINIMUM_SIZE;
+            return EMPTY_RHYMER_INDICATOR;
         return numbers[total--];
     }
 
